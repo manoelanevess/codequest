@@ -1,6 +1,23 @@
 {
   "licoes": [],
-  "usuarios": [],
+  "usuarios": [
+    {
+      "id": "ed59",
+      "nome": "Manoela Neves",
+      "email": "manoelanevessr@gmail.com",
+      "senha": "05012007mn",
+      "xp": 0,
+      "resetCode": null,
+      "resetExpires": null
+    },
+    {
+      "id": "9562",
+      "nome": "manoela das neves ",
+      "email": "manoelanevessr@gmail.com",
+      "senha": "05012007mn",
+      "xp": 0
+    }
+  ],
   "comentarios": [],
   "conquistas": []
 }
