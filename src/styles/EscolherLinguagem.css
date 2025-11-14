@@ -1,0 +1,51 @@
+.lang-container {
+  background: #c3ddfd;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.lang-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.lang-subtitle {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  padding: 0 1rem;
+}
+
+.lang-card {
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid #6283A9;
+  border-radius: 20px;
+  padding: 1.3rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.lang-card:hover {
+  transform: scale(1.03);
+}
+
+.lang-mascote {
+  width: 60px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.lang-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
