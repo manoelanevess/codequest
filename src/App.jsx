@@ -6,6 +6,10 @@ import EscolherLinguagem from "./pages/EscolherLinguagem.jsx";
 import ComoDescobriu from "./pages/ComoDescobriu.jsx";
 import MetaDiaria from "./pages/MetaDiaria.jsx";
 import RecuperarSenha from "./pages/RecuperarSenha.jsx";
+import Principal from "./pages/Principal.jsx";
+import Licao from "./pages/Licao.jsx";
+import Perfil from "./pages/Perfil";
+
 
 export default function App() {
   return (
@@ -17,6 +21,9 @@ export default function App() {
   <Route path="/como-descobriu" element={<ComoDescobriu />} />
   <Route path="/meta-diaria" element={<MetaDiaria />} />
   <Route path="/recuperar" element={<RecuperarSenha />} />
+  <Route path="/principal/:linguagem" element={<Principal />} />
+  <Route path="/principal/:linguagem/licao/:id" element={<Licao />} />
+  <Route path="/perfil" element={<Perfil />} />
   <Route path="*" element={<Home />} />
 </Routes>
   );

@@ -40,23 +40,42 @@ export default function Cadastro() {
       return showError("As senhas não coincidem.");
     }
 
-    // Criar usuário na API
     try {
       const novoUser = {
         nome,
         email,
         senha,
-        xp: 0
+        xp: 0,
       };
 
-      await fetch(`${API}/usuarios`, {
+      // cria usuário na API
+      const resposta = await fetch(`${API}/usuarios`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(novoUser)
+        body: JSON.stringify(novoUser),
       });
 
+      if (!resposta.ok) {
+        throw new Error("Erro ao criar usuário na API");
+      }
+
+      const usuarioCriado = await resposta.json();
+
+      // já considera o usuário logado
+      localStorage.setItem(
+        "usuarioLogado",
+        JSON.stringify({
+          id: usuarioCriado.id,
+          email: usuarioCriado.email,
+          nome: usuarioCriado.nome,
+        })
+      );
+
+      // feedback de sucesso
       alert("Conta criada com sucesso!");
-      navigate("/login");
+
+      // redireciona direto para a página principal do fluxo
+      navigate("/linguagens"); 
 
     } catch (err) {
       console.error(err);
@@ -67,7 +86,6 @@ export default function Cadastro() {
   return (
     <div className="cad-container">
       <form className="cad-card" onSubmit={handleCadastro}>
-
         <img src="/logo.svg" className="cad-logo" alt="CodeQuest" />
 
         {msg && <div className="cad-alert">{msg}</div>}
@@ -115,7 +133,9 @@ export default function Cadastro() {
           Eu concordo com os termos de uso
         </label>
 
-        <button className="cad-btn">Criar conta</button>
+        <button className="cad-btn" type="submit">
+          Criar conta
+        </button>
 
         <p className="cad-back">
           Já tem conta? <Link to="/login">Entrar</Link>
