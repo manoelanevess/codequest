@@ -1,0 +1,63 @@
+.perfil-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.perfil-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.perfil-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.btn-voltar-perfil {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: none;
+}
+
+.perfil-lista {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.perfil-card {
+  padding: 1.3rem;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid #eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+.perfil-topo {
+  margin-bottom: 1rem;
+}
+
+.perfil-card h2 {
+  margin-bottom: 0.2rem;
+}
+
+.perfil-progresso {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.perfil-status p {
+  margin: 0.2rem 0;
+}
+
+.perfil-mascote {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.perfil-mascote img {
+  width: 100px;
+  height: auto;
+}

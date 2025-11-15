@@ -1,0 +1,196 @@
+.licao-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.licao-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.licao-header p {
+  margin-bottom: 0.5rem;
+}
+
+.barra-progresso {
+  width: 100%;
+  height: 10px;
+  background-color: #e5e5e5;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.barra-preenchida {
+  height: 100%;
+  background-color: #4f46e5;
+  transition: width 0.3s ease;
+}
+
+.btn-voltar-licoes {
+  display: inline-block;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.card-pergunta {
+  margin-top: 1rem;
+  padding: 1.4rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.enunciado {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.lista-alternativas {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.alternativa {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.alternativa:hover {
+  background-color: #eef2ff;
+}
+
+.alternativa.selecionada {
+  border-color: #4f46e5;
+  background-color: #eef2ff;
+}
+
+.alternativa.correta {
+  background-color: #dcfce7;
+  border-color: #16a34a;
+}
+
+.alternativa.incorreta {
+  background-color: #fee2e2;
+  border-color: #dc2626;
+}
+
+.area-feedback {
+  margin-top: 1rem;
+}
+
+.feedback {
+  margin-bottom: 0.5rem;
+}
+
+.feedback.certo {
+  color: #16a34a;
+}
+
+.feedback.errado {
+  color: #dc2626;
+}
+
+.btn-proximo {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+.resultado-final {
+  margin-top: 2rem;
+  padding: 1.4rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.licao-mascote {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* MASCOTE */
+.mascote-area {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.mascote-area img {
+  width: 110px;
+  transition: transform 0.3s ease;
+}
+
+.mascote-area.feliz img {
+  transform: scale(1.15);
+}
+
+.mascote-area.triste img {
+  filter: grayscale(100%);
+  transform: rotate(-5deg);
+}
+
+.mascote-area.levelup img {
+  animation: pular 0.4s infinite alternate;
+}
+
+@keyframes pular {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* ANIMAÇÃO DE XP */
+.xp-ganho {
+  font-size: 1.5rem;
+  color: #22c55e;
+  font-weight: bold;
+  animation: xpAnim 1.2s ease forwards;
+  margin-top: 10px;
+}
+
+@keyframes xpAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-25px) scale(1);
+  }
+}
+
+.levelup-msg {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #fbbf24;
+  font-weight: bold;
+}
