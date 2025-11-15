@@ -1,22 +1,24 @@
 import "../styles/EscolherLinguagem.css";
 import { useNavigate } from "react-router-dom";
 
-
 const linguagens = [
-  { id: 1, nome: "JavaScript",  mascote: "/rapSentada.png" },
-  { id: 2, nome: "Python",      mascote: "/sapo.png" },
-  { id: 3, nome: "Java",        mascote: "/tartSentada.png" },
-  { id: 4, nome: "C#",          mascote: "/pingSentado.png" },
-  { id: 5, nome: "PHP",         mascote: "/rapSentada.png" },
-  { id: 6, nome: "TypeScript",  mascote: "/sapo.png" },
+  { id: 1, nome: "JavaScript",  slug: "javascript",  mascote: "/rapSentada.png" },
+  { id: 2, nome: "Python",      slug: "python",      mascote: "/sapo.png" },
+  { id: 3, nome: "Java",        slug: "java",        mascote: "/tartSentada.png" },
+  { id: 4, nome: "C#",          slug: "csharp",      mascote: "/pingSentado.png" },
+  { id: 5, nome: "PHP",         slug: "php",         mascote: "/rapSentada.png" },
+  { id: 6, nome: "TypeScript",  slug: "typescript",  mascote: "/sapo.png" },
 ];
 
 export default function EscolherLinguagem() {
   const navigate = useNavigate();
 
   function selecionarLinguagem(lang) {
-    localStorage.setItem("linguagemEscolhida", lang.nome);
-    navigate("/como-descobriu");
+    // salvar no localStorage 
+    localStorage.setItem("linguagemEscolhida", lang.slug);
+
+    // vai para a rota principal dinâmica
+    navigate(`/principal/${lang.slug}`);
   }
 
   return (

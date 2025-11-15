@@ -40,7 +40,7 @@ export default function RecuperarSenha() {
     try {
       let user = await findUser(email.trim());
 
-      // se não existir, cria cadastro mínimo (pode customizar)
+      // se não existir, cria cadastro mínimo
       if (!user) {
         const rNew = await fetch(`${API}/usuarios`, {
           method: "POST",

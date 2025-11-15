@@ -14,8 +14,6 @@ export default function MetaDiaria() {
   function confirmarMeta() {
     localStorage.setItem("metaDiaria", selecionada);
     alert("Meta diária definida! 🎯 Agora é só começar a aprender.");
-    // depois você pode redirecionar para a tela principal:
-    // navigate("/principal");
   }
 
   return (
