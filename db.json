@@ -1,12 +1,20 @@
 {
-  "licoes": [],
+  "licoes": [
+    {
+      "id": "ec29",
+      "usuarioId": "ed59",
+      "linguagem": "javascript",
+      "licaoId": 2,
+      "concluidaEm": "2025-11-15T17:33:53.063Z"
+    }
+  ],
   "usuarios": [
     {
       "id": "ed59",
       "nome": "Manoela Neves",
       "email": "manoelanevessr@gmail.com",
       "senha": "05012007mn",
-      "xp": 0,
+      "xp": 100,
       "resetCode": null,
       "resetExpires": null
     },
@@ -16,6 +24,24 @@
       "email": "manoelanevessr@gmail.com",
       "senha": "05012007mn",
       "xp": 0
+    },
+    {
+      "id": "d266",
+      "nome": "Victor Bonow",
+      "email": "victorbonowx@gmail.com",
+      "senha": "123456",
+      "xp": 0,
+      "resetCode": null,
+      "resetExpires": null
+    },
+    {
+      "id": "d83f",
+      "nome": "Maria Eduarda Machado",
+      "email": "frangacozidah@gmail.com",
+      "senha": "123456",
+      "xp": 0,
+      "resetCode": "338236",
+      "resetExpires": 1763227674411
     }
   ],
   "comentarios": [],
