@@ -6,6 +6,27 @@
       "linguagem": "javascript",
       "licaoId": 2,
       "concluidaEm": "2025-11-15T17:33:53.063Z"
+    },
+    {
+      "id": "7f33",
+      "usuarioId": "d6aa",
+      "linguagem": "javascript",
+      "licaoId": 1,
+      "concluidaEm": "2025-11-17T18:19:00.444Z"
+    },
+    {
+      "id": "c5b4",
+      "usuarioId": "d0b5",
+      "linguagem": "javascript",
+      "licaoId": 1,
+      "concluidaEm": "2025-11-17T20:27:35.463Z"
+    },
+    {
+      "id": "783c",
+      "usuarioId": "1928",
+      "linguagem": "javascript",
+      "licaoId": 1,
+      "concluidaEm": "2025-11-17T20:44:08.884Z"
     }
   ],
   "usuarios": [
@@ -42,6 +63,16 @@
       "xp": 0,
       "resetCode": "338236",
       "resetExpires": 1763227674411
+    },
+    {
+      "id": "1928",
+      "nome": "erick sonic",
+      "email": "erick@gmail.com",
+      "senha": "123123",
+      "xp": 50,
+      "linguagens": [
+        "javascript"
+      ]
     }
   ],
   "comentarios": [],

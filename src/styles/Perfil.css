@@ -8,31 +8,40 @@
   text-align: center;
   margin-bottom: 2rem;
 }
-
+.topo-card{
+  display: flex;
+justify-content: center;
+align-items: center;
+  gap: 1rem;
+}
 .perfil-header h1 {
   font-size: 2rem;
   margin-bottom: 0.3rem;
 }
 
 .btn-voltar-perfil {
-  display: inline-block;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #555;
-  text-decoration: none;
+
 }
 
 .perfil-lista {
-  display: grid;
-  gap: 1.5rem;
+    display: grid;
+    justify-content: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+      padding: 0 1rem;
 }
 
 .perfil-card {
-  padding: 1.3rem;
-  background: white;
-  border-radius: 12px;
-  border: 2px solid #eee;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  background: rgba(255, 255, 255, 0.4);
+    border: 2px solid #6283A9;
+    border-radius: 20px;
+    padding: 2rem 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.15s;
 }
 
 .perfil-topo {
@@ -60,4 +69,44 @@
 .perfil-mascote img {
   width: 100px;
   height: auto;
+}
+.btn-voltar{
+      background-color: #0CA6E9;
+        border-radius: 15px;
+        border: none;
+        padding: 0.3rem 3rem;
+        font-size: 1.8rem;
+        color: white;
+        width: 40vh;
+}
+@media (max-width: 844px) {
+  .perfil-lista {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  
+      gap: 0.6rem;
+    
+    }
+        .perfil-card {
+          background: rgba(255, 255, 255, 0.4);
+          border: 2px solid #6283A9;
+          border-radius: 20px;
+          padding: 0.2rem 1rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: 0.15s;
+        }
+                .btn-voltar {
+                  background-color: #0CA6E9;
+                  border-radius: 15px;
+                  border: none;
+                  padding: 0.2rem 1rem;
+                  font-size: 1.5rem;
+                  color: white;
+                  /* width: 30vh; */
+                  /* margin-bottom: 2rem; */
+                }
 }

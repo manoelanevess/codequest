@@ -1,25 +1,26 @@
-.lang-container {
-  background: #c3ddfd;
-  min-height: 100vh;
-  padding: 2rem 1rem;
-  text-align: center;
+.lang-container{
+  margin-top: 4rem;
 }
-
-.lang-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+.lang_logo  {
+  display: flex;
+  justify-content: center;
+ align-items: center;
+}
+.lang_logo img{
+  width: 20vh;
 }
 
 .lang-subtitle {
-  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
 .lang-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
   padding: 0 1rem;
 }
 
@@ -27,20 +28,25 @@
   background: rgba(255, 255, 255, 0.4);
   border: 2px solid #6283A9;
   border-radius: 20px;
-  padding: 1.3rem 0.5rem;
+  padding: 5rem 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: 0.15s;
+}
+.lang-card img{
+width: 150px;
 }
 
 .lang-card:hover {
   transform: scale(1.03);
+  box-shadow: 4px 2px 20px #6283A9;
 }
 
-.lang-mascote {
-  width: 60px;
+.lang-mascote img {
+  width: 20px;
   height: auto;
   margin-bottom: 0.5rem;
 }
@@ -48,4 +54,51 @@
 .lang-name {
   font-size: 1rem;
   font-weight: 600;
+}
+
+
+@media (max-width: 844px) {
+  .lang-container {
+      margin-top: 1rem;
+    }
+      .lang-subtitle {
+        display: flex;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+        .lang_logo img {
+          width: 20vh;
+        }
+.lang-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .lang-card {
+      background: rgba(255, 255, 255, 0.4);
+      border: 2px solid #6283A9;
+      border-radius: 20px;
+      padding: 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+  
+    .lang-card img {
+      width: 96px;
+    }
+  
+    .lang-card:hover {
+      transform: scale(1.03);
+      box-shadow: 4px 2px 20px #6283A9;
+    }
+        .lang-name {
+          font-size: 1rem;
+          font-weight: 600;
+        }
 }

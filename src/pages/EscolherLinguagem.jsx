@@ -2,12 +2,12 @@ import "../styles/EscolherLinguagem.css";
 import { useNavigate } from "react-router-dom";
 
 const linguagens = [
-  { id: 1, nome: "JavaScript",  slug: "javascript",  mascote: "/rapSentada.png" },
-  { id: 2, nome: "Python",      slug: "python",      mascote: "/sapo.png" },
-  { id: 3, nome: "Java",        slug: "java",        mascote: "/tartSentada.png" },
-  { id: 4, nome: "C#",          slug: "csharp",      mascote: "/pingSentado.png" },
-  { id: 5, nome: "PHP",         slug: "php",         mascote: "/rapSentada.png" },
-  { id: 6, nome: "TypeScript",  slug: "typescript",  mascote: "/sapo.png" },
+  { id: 1, nome: "JavaScript",  slug: "javascript",  mascote: "/js.png" },
+  { id: 2, nome: "Python",      slug: "python",      mascote: "/py.png" },
+  { id: 3, nome: "Java",        slug: "java",        mascote: "/java.png" },
+  { id: 4, nome: "C#",          slug: "csharp",      mascote: "/c.png" },
+  { id: 5, nome: "PHP",         slug: "php",         mascote: "/php.png" },
+  { id: 6, nome: "TypeScript",  slug: "typescript",  mascote: "/ts.png" },
 ];
 
 export default function EscolherLinguagem() {
@@ -22,8 +22,11 @@ export default function EscolherLinguagem() {
   }
 
   return (
+    <>
     <div className="lang-container">
-      <h1 className="lang-title">CodeQuest</h1>
+      <div className="lang_logo">
+      <img  src="/logoazul.svg" alt="" />
+      </div>
       <p className="lang-subtitle">Escolha a linguagem que deseja aprender</p>
 
       <div className="lang-grid">
@@ -45,5 +48,6 @@ export default function EscolherLinguagem() {
         ))}
       </div>
     </div>
+    </>
   );
 }

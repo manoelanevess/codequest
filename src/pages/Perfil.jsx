@@ -18,14 +18,11 @@ export default function Perfil() {
   const linguagens = Object.keys(perguntasPorLinguagem);
 
   return (
+    <>
     <div className="perfil-container">
       <header className="perfil-header">
         <h1>Seu Perfil</h1>
         <p>Acompanhe seu progresso no CodeQuest ✨</p>
-
-        <Link to="/linguagens" className="btn-voltar-perfil">
-          ← Voltar
-        </Link>
       </header>
 
       <div className="perfil-lista">
@@ -43,7 +40,15 @@ export default function Perfil() {
           return (
             <div key={lingua} className="perfil-card">
               <div className="perfil-topo">
+                <div className="perfil-mascote">
+                  <div className="topo-card">
+                  <img
+                    src={`/${lingua}.png`}
+                    alt={nome}
+                  />
                 <h2>{nome}</h2>
+                </div>
+                  </div>
                 <p className="perfil-progresso">
                   {concluidas} de {total} lições concluídas ({porcentagem}%)
                 </p>
@@ -64,17 +69,15 @@ export default function Perfil() {
                   </p>
                 )}
               </div>
-
-              <div className="perfil-mascote">
-                <img
-                  src={`/${lingua}.png`}
-                  alt={nome}
-                />
-              </div>
             </div>
+            
           );
         })}
       </div>
     </div>
+      <Link to="/principal" className="btn-voltar">
+        ← Voltar
+      </Link>
+    </>
   );
 }

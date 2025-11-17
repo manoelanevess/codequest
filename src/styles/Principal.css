@@ -1,153 +1,252 @@
-.principal-container {
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: "Poppins", sans-serif;
+/* === LAYOUT GERAL ===================================================== */
+
+.tela-principal {
+  display: grid;
+  grid-template-columns: 220px 1fr 260px;
+  height: 100vh;
+  background: #f8f8f8;
+}
+
+/* === COLUNA 1 — MENU ESQUERDO ======================================== */
+
+.coluna-esquerda {
+  background: white;
+  border-right: 1px solid #dcdcdc;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-menu {
+  width: 220px;
+}
+
+.menu-links {
+  display: flex;
+  gap: 20px;
+  background-color: #0CA6E9;
+  padding-left: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+i{
+  font-size: 2.3rem;
+}
+.menu-links a {
+color: black;
+}
+
+/* === COLUNA 2 — CONTEÚDO CENTRAL ==================================== */
+
+.coluna-centro {
+  padding: 30px 50px;
+  overflow-y: auto;
 }
 
 .principal-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.3rem;
-  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 5px;
 }
 
 .principal-text {
-  margin-bottom: 1rem;
-  font-size: 1rem;
   color: #444;
+  margin-bottom: 10px;
 }
 
-.btn-voltar {
-  display: inline-block;
-  margin-top: 0.5rem;
-  text-decoration: none;
-  padding: 0.5rem 0.9rem;
-  background-color: #eee;
-  border-radius: 10px;
+.principal-status {
+  font-size: 15px;
   color: #333;
-  font-size: 0.9rem;
-  transition: 0.2s;
+  margin-bottom: 15px;
 }
-
-.btn-voltar:hover {
-  background-color: #ddd;
-}
+/* === LISTA DE LIÇÕES ================================================= */
 
 .lista-licoes {
-  margin-top: 2rem;
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .card-licao {
-  padding: 1.2rem;
+  background: white;
+  padding: 20px;
   border-radius: 12px;
-  border: 1px solid #e5e5e5;
-  background-color: #fafafa;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+  border: 1px solid #dfdfdf;
 }
-
-.card-licao h2 {
-  margin-bottom: 0.4rem;
-  font-size: 1.3rem;
+.fase-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-
+.fase-circle {
+  width: 42px;
+  height: 42px;
+  background: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fase-texto h2 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
 .btn-comecar {
-  margin-top: 0.7rem;
-  padding: 0.5rem 1rem;
+  margin-top: 10px;
+  padding: 10px 14px;
+  font-weight: bold;
+  background: #0CA6E9;
   border: none;
-  border-radius: 12px;
-  background-color: #4f46e5;
   color: white;
+  border-radius: 8px;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .btn-comecar:hover {
-  background-color: #4338ca;
+  background: #0b80b3;
 }
-
-.aviso {
-  margin-top: 2rem;
-  font-size: 1.1rem;
-  color: #666;
-}
-
-.principal-status {
-  margin-top: 0.3rem;
-  margin-bottom: 0.8rem;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.card-licao.concluida {
-  border-color: #22c55e;
-  box-shadow: 0px 2px 8px rgba(34, 197, 94, 0.25);
-}
-
 .badge-concluida {
-  margin-top: 0.4rem;
-  font-size: 0.85rem;
-  color: #16a34a;
-}
-
-.principal-links {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.card-licao.fase {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.fase-header {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.fase-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  border: 2px solid #4f46e5;
-  background-color: #eef2ff;
-  font-size: 1.2rem;
-}
-
-.card-licao.concluida .fase-circle {
-  border-color: #22c55e;
-  background-color: #dcfce7;
-}
-
-.card-licao.bloqueada .fase-circle {
-  border-color: #9ca3af;
-  background-color: #f3f4f6;
-}
-
-.card-licao.bloqueada {
-  opacity: 0.8;
-}
-
-.badge-concluida {
-  font-size: 0.85rem;
-  color: #16a34a;
+  padding-left: 3rem;
+  color: green;
+  font-size: 13px;
 }
 
 .badge-bloqueada {
-  font-size: 0.85rem;
-  color: #dc2626;
+  padding-left: 3.2rem;
+  color: #c00000;
+  font-size: 14px;
+}
+.bloqueada {
+  opacity: 0.8;
 }
 
-.btn-comecar:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+/* === COLUNA 3 — PAINEL DIREITO ====================================== */
+.coluna-direita {
+  margin-top: 2.5rem;
+  background: white;
+  border-left: 1px solid #dcdcdc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.principal_juntos{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #0CA6E9;
+    padding: 0.3rem;
+    border-radius: 15px;
+}
+.principal_perfil{
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+font-size: 1.4rem;
+color: black;
+gap: 1rem;
+}
+
+
+
+/* === SCROLL LIMPO PARA A COLUNA DO MEIO ============================= */
+
+.coluna-centro::-webkit-scrollbar {
+  width: 6px;
+}
+
+.coluna-centro::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 20px;
+}
+
+/* =======================
+   MOBILE — max-width 844px
+   ======================= */
+
+@media (max-width: 844px) {
+
+  /* GRID vira layout vertical */
+  .tela-principal {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    height: auto;
+  }
+
+  /* MENU vira topo */
+  .coluna-esquerda {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #dcdcdc;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .logo-menu {
+    width: 150px;
+    margin: 0;
+  }
+
+  .menu-links {
+    
+    gap: 1px;
+  }
+
+  .menu-links a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  /* COLUNA CENTRAL */
+  .coluna-centro {
+    padding: 20px;
+    height: auto;
+  }
+
+  .principal-header h1 {
+    font-size: 22px;
+  }
+
+  .lista-licoes {
+    gap: 15px;
+  }
+
+  .card-licao {
+    padding: 16px;
+  }
+
+  .fase-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .fase-texto h2 {
+    font-size: 18px;
+  }
+
+  .btn-comecar {
+    width: 100%;
+    padding: 12px;
+  }
+
+  /* PAINEL DIREITO vai pra baixo */
+  .coluna-direita {
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #dcdcdc;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .painel-card {
+    padding: 15px;
+    font-size: 16px;
+  }
 }

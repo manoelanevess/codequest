@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ultra&display=swap');
+
+* {
+    font-family: "Poppins";
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+.logo_cadastro {
+    width: 16vw;
+    margin-top: 4rem;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+.tudo_cad form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.logo_cadastro img{
+    margin-top: 10vh;
+}
+.tudo_cad input{
+    width: 30vw;
+    border-radius: 20px;
+}
+.cad-termos input{
+    width: 20px;
+    height: 20px;
+}
+.cad-termos{
+    font-size: 0.850rem;
+    display: flex;
+    gap: 1rem;
+}
+.cad_btn{
+    background-color: #0CA6E9;
+        border-radius: 15px;
+        border: none;
+        padding: 1rem ;
+        font-size: 1.8rem;
+        color: white;
+        width: 40vh;
+}
+@media (max-width: 844px) {
+.logo_cadastro {
+        width: 40vw;
+        margin-top: 3rem;
+    }
+.tudo_cad input {
+        width: 80vw;
+        border-radius: 20px;
+    }
+        .cad-termos input {
+            width: 20px;
+            height: 20px;
+        }
+        .cad_btn{
+                background-color: #0CA6E9;
+                    border-radius: 15px;
+                    border: none;
+                    font-size: 1.3rem;
+                    color: white;
+                    width: 73vw;
+        }
+}

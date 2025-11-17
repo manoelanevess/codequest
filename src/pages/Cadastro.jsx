@@ -25,7 +25,7 @@ export default function Cadastro() {
     e.preventDefault();
 
     if (!nome || !email || !senha || !confirmSenha) {
-      return showError("Preencha todos os campos.");
+      return  showError("Preencha todos os campos.");
     }
 
     if (!termos) {
@@ -84,9 +84,10 @@ export default function Cadastro() {
   }
 
   return (
-    <div className="cad-container">
+    <>
+    <div className="tudo_cad">
       <form className="cad-card" onSubmit={handleCadastro}>
-        <img src="/logo.svg" className="cad-logo" alt="CodeQuest" />
+        <img  src="logomais.svg" className="logo_cadastro" alt="CodeQuest" />
 
         {msg && <div className="cad-alert">{msg}</div>}
 
@@ -133,7 +134,7 @@ export default function Cadastro() {
           Eu concordo com os termos de uso
         </label>
 
-        <button className="cad-btn" type="submit">
+        <button className="cad_btn" type="submit">
           Criar conta
         </button>
 
@@ -142,5 +143,6 @@ export default function Cadastro() {
         </p>
       </form>
     </div>
+    </>
   );
 }

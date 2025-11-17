@@ -97,12 +97,15 @@ export default function Login() {
   }
 
   return (
-    <div className="login-page">
+    <>
+    <div className="img_logo">
+      <img src="pinguim.svg" alt="" />
+    </div>
+    <div className="login">
       <form onSubmit={handleSubmit} className="login-form">
-        <h2 className="login-title">Login</h2>
-
+        <h2 className="login-title">Entrar</h2>
         {/* EMAIL */}
-        <div className="login-field">
+        <div className="email">
           <input
             name="email"
             placeholder="Email"
@@ -114,12 +117,12 @@ export default function Login() {
             className={`login-input ${erroEmail ? "login-input-erro" : ""}`}
           />
           {erroEmail && (
-            <p className="login-error-text">Email inválido.</p>
+            <p className="erro">Email inválido.</p>
           )}
         </div>
 
         {/* SENHA */}
-        <div className="login-field login-password-wrapper">
+        <div className="senha">
           <input
             name="password"
             type={mostrarSenha ? "text" : "password"}
@@ -135,17 +138,17 @@ export default function Login() {
           <button
             type="button"
             onClick={() => setMostrarSenha(!mostrarSenha)}
-            className="login-toggle-senha-btn"
+            className="btn_msenha"
           >
             {mostrarSenha ? "🙈" : "👁"}
           </button>
 
           {erroSenha && (
-            <p className="login-error-text">Senha incorreta.</p>
+            <p className="erro">Senha incorreta.</p>
           )}
         </div>
 
-        <div className="login-actions">
+        <div className="botoes_login">
           <Link to="/recuperar" className="login-link">
             Esqueceu a senha?
           </Link>
@@ -153,13 +156,13 @@ export default function Login() {
           <button
             type="submit"
             disabled={loading}
-            className={`login-submit-btn ${loading ? "loading" : ""}`}
+            className={`entrar ${loading ? "loading" : ""}`}
           >
             {loading ? "Entrando..." : "Entrar"}
           </button>
         </div>
 
-        <p className="login-footer">
+        <p className="footer">
           Não tem conta?{" "}
           <Link to="/cadastro" className="login-link">
             Crie
@@ -167,5 +170,6 @@ export default function Login() {
         </p>
       </form>
     </div>
+    </>
   );
 }
