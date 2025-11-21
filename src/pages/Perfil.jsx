@@ -22,7 +22,7 @@ export default function Perfil() {
     <div className="perfil-container">
       <header className="perfil-header">
         <h1>Seu Perfil</h1>
-        <p>Acompanhe seu progresso no CodeQuest ✨</p>
+        <p>Acompanhe seu progresso no CodeQuest</p>
       </header>
 
       <div className="perfil-lista">
@@ -75,7 +75,7 @@ export default function Perfil() {
         })}
       </div>
     </div>
-      <Link to="/principal" className="btn-voltar">
+      <Link to="/linguagens" className="btn-voltar">
         ← Voltar
       </Link>
     </>

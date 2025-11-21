@@ -27,6 +27,20 @@
       "linguagem": "javascript",
       "licaoId": 1,
       "concluidaEm": "2025-11-17T20:44:08.884Z"
+    },
+    {
+      "id": "23eb",
+      "usuarioId": "5adf",
+      "linguagem": "javascript",
+      "licaoId": 1,
+      "concluidaEm": "2025-11-19T14:18:48.860Z"
+    },
+    {
+      "id": "7c1a",
+      "usuarioId": "5adf",
+      "linguagem": "javascript",
+      "licaoId": 2,
+      "concluidaEm": "2025-11-19T14:19:03.948Z"
     }
   ],
   "usuarios": [
@@ -36,8 +50,8 @@
       "email": "manoelanevessr@gmail.com",
       "senha": "05012007mn",
       "xp": 100,
-      "resetCode": null,
-      "resetExpires": null
+      "resetCode": "127978",
+      "resetExpires": 1763565732019
     },
     {
       "id": "9562",
@@ -73,6 +87,44 @@
       "linguagens": [
         "javascript"
       ]
+    },
+    {
+      "id": "b108",
+      "nome": "Julia Alsina",
+      "email": "juliawalsinaw@gmail.com",
+      "senha": "alsina0406",
+      "xp": 0
+    },
+    {
+      "id": "a284",
+      "nome": "Joao Pedro moraes",
+      "email": "joaopdemoraes@gmail.com",
+      "senha": "123456",
+      "xp": 0
+    },
+    {
+      "id": "3b70",
+      "nome": "maria pereira",
+      "email": "mariaperr@gmail.com",
+      "senha": "1234567",
+      "xp": 0
+    },
+    {
+      "id": "5adf",
+      "nome": "bruna ribeiro",
+      "email": "brunarib@gmail.com",
+      "senha": "123456",
+      "xp": 100,
+      "linguagens": [
+        "javascript"
+      ]
+    },
+    {
+      "id": "ae6c",
+      "email": "manoelanevessr@gmail",
+      "nome": "Usuário",
+      "senha": "",
+      "xp": 0
     }
   ],
   "comentarios": [],
