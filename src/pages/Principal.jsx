@@ -2,7 +2,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { perguntasPorLinguagem } from "../utils/PerguntasPorLinguagem";
 import "../styles/Principal.css";
 import { carregarProgresso, calcularNivel } from "../utils/Progresso";
-import "bootstrap-icons/font/bootstrap-icons.css";
+// import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 const nomesBonitos = {
@@ -28,8 +28,6 @@ export default function Principal() {
 
   return (
     <div className="tela-principal">
-
-      {/* COLUNA 1 — MENU LATERAL */}
       <aside className="coluna-esquerda">
         <img src="/code.svg" className="logo-menu" />
 
@@ -39,7 +37,6 @@ export default function Principal() {
         </nav>
       </aside>
 
-      {/* COLUNA 2 — CONTEÚDO */}
       <main className="coluna-centro">
 
         <header className="principal-header">

@@ -75,7 +75,7 @@ export default function Cadastro() {
       alert("Conta criada com sucesso!");
 
       // redireciona direto para a página principal do fluxo
-      navigate("/linguagens"); 
+      navigate("/como-descobriu"); 
 
     } catch (err) {
       console.error(err);
@@ -137,6 +137,7 @@ export default function Cadastro() {
         <button className="cad_btn" type="submit">
           Criar conta
         </button>
+
 
         <p className="cad-back">
           Já tem conta? <Link to="/login">Entrar</Link>

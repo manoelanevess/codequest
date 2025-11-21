@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/MetaDiaria.css";
 
 const metas = [
@@ -10,46 +11,47 @@ const metas = [
 
 export default function MetaDiaria() {
   const [selecionada, setSelecionada] = useState("regular");
+  const navigate = useNavigate();
 
   function confirmarMeta() {
     localStorage.setItem("metaDiaria", selecionada);
     alert("Meta diária definida! 🎯 Agora é só começar a aprender.");
+    navigate("/linguagens");
   }
 
   return (
-    <div className="goal-container">
-      {/* barra de progresso sem seta */}
-      <div className="goal-top">
-        <div className="goal-progress">
-          <div className="goal-progress-bar" />
+    <div className="goal-page">
+      
+      {/* LOGO IGUAL A OUTRA TELA */}
+      <img src="/logomais.svg" alt="CodeQuest" className="goal-logo" />
+
+      <div className="goal-card">
+        <h2 className="goal-title">
+          Ótimo! Agora escolha
+          <br />
+          uma meta diária.
+        </h2>
+
+        <div className="goal-list">
+          {metas.map((meta) => (
+            <button
+              key={meta.id}
+              className={
+                "goal-item" +
+                (meta.id === selecionada ? " goal-item--active" : "")
+              }
+              onClick={() => setSelecionada(meta.id)}
+            >
+              <span className="goal-item-title">{meta.titulo}</span>
+              <span className="goal-item-desc">{meta.descricao}</span>
+            </button>
+          ))}
         </div>
+
+        <button className="goal-continue" onClick={confirmarMeta}>
+          CONTINUAR
+        </button>
       </div>
-
-      <h2 className="goal-title">
-        Ótimo! Agora escolha
-        <br />
-        uma meta diária.
-      </h2>
-
-      <div className="goal-list">
-        {metas.map((meta) => (
-          <button
-            key={meta.id}
-            className={
-              "goal-item" +
-              (meta.id === selecionada ? " goal-item--active" : "")
-            }
-            onClick={() => setSelecionada(meta.id)}
-          >
-            <span className="goal-item-title">{meta.titulo}</span>
-            <span className="goal-item-desc">{meta.descricao}</span>
-          </button>
-        ))}
-      </div>
-
-      <button className="goal-continue" onClick={confirmarMeta}>
-        CONTINUAR
-      </button>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+// src/pages/ComoDescobriu.jsx
 import "../styles/ComoDescobriu.css";
 import { useNavigate } from "react-router-dom";
 
@@ -18,23 +19,31 @@ export default function ComoDescobriu() {
   }
 
   return (
-    <div className="origem-container">
-      <h1 className="origem-title">CodeQuest</h1>
+    <div className="origem-page">
+      <div className="origem-card">
+        <img
+          src="logomais.svg"
+          className="origem-logo"
+          alt="Logo CodeQuest"
+        />
 
-      <p className="origem-subtitle">
-        Como você descobriu o CodeQuest?
-      </p>
+        <h2 className="origem-title">Como você descobriu o CodeQuest?</h2>
 
-      <div className="origem-lista">
-        {opcoes.map((op) => (
-          <button
-            key={op}
-            className="origem-botao"
-            onClick={() => selecionarOrigem(op)}
-          >
-            {op}
-          </button>
-        ))}
+        <p className="origem-subtitle">
+          Isso ajuda a gente a entender melhor de onde você veio e melhorar a sua experiência.
+        </p>
+
+        <div className="origem-lista">
+          {opcoes.map((op) => (
+            <button
+              key={op}
+              className="origem-botao"
+              onClick={() => selecionarOrigem(op)}
+            >
+              {op}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -2,12 +2,12 @@ import "../styles/EscolherLinguagem.css";
 import { useNavigate } from "react-router-dom";
 
 const linguagens = [
-  { id: 1, nome: "JavaScript",  slug: "javascript",  mascote: "/js.png" },
-  { id: 2, nome: "Python",      slug: "python",      mascote: "/py.png" },
+  { id: 1, nome: "JavaScript",  slug: "javascript",  mascote: "/javascript.png" },
+  { id: 2, nome: "Python",      slug: "python",      mascote: "/python.png" },
   { id: 3, nome: "Java",        slug: "java",        mascote: "/java.png" },
-  { id: 4, nome: "C#",          slug: "csharp",      mascote: "/c.png" },
+  { id: 4, nome: "C#",          slug: "csharp",      mascote: "/csharp.png" },
   { id: 5, nome: "PHP",         slug: "php",         mascote: "/php.png" },
-  { id: 6, nome: "TypeScript",  slug: "typescript",  mascote: "/ts.png" },
+  { id: 6, nome: "TypeScript",  slug: "typescript",  mascote: "/typescript.png" },
 ];
 
 export default function EscolherLinguagem() {
