@@ -19,10 +19,6 @@ align-items: center;
   margin-bottom: 0.3rem;
 }
 
-.btn-voltar-perfil {
-
-}
-
 .perfil-lista {
     display: grid;
     justify-content: center;

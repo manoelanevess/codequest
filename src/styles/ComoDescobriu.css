@@ -1,57 +1,152 @@
-.origem-container {
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ultra&display=swap');
+
+* {
+  font-family: "Poppins", system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Tela inteira, tudo centralizado na coluna */
+.origem-page {
   min-height: 100vh;
-  background: #c3ddfd;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px 16px;
-  font-family: "Poppins", system-ui, sans-serif;
+  justify-content: flex-start;   /* começa um pouco mais pra cima */
+  padding: 40px 16px;            /* espaço em cima e nas laterais */
+  gap: 16px;
 }
 
-.origem-top {
+/* Wrapper do conteúdo (em vez do card) */
+.origem-card {
   width: 100%;
-  max-width: 320px;
+  max-width: 360px;              /* parecido com o cadastro */
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
+  gap: 16px;
 }
 
-.origem-back {
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  color: #4a648c;
-  cursor: pointer;
+/* Logo um pouco mais pra cima e proporcional */
+.origem-logo {
+  width: 140px;
+  max-width: 40vw;
+  margin-bottom: 8px;
 }
 
-.origem-progress {
-  flex: 1;
-  height: 8px;
-  border-radius: 999px;
-  background: #bfdcf8;
-  overflow: hidden;
-}
-
-.origem-progress-bar {
-  width: 50%;              /* 50% da jornada */
-  height: 100%;
-  background: #4a648c;
-}
-
+/* título principal */
 .origem-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #456c9a;
-  margin-bottom: 20px;
-}
-
-.origem-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   text-align: center;
-  color: #2c3340;
-  margin-bottom: 24px;
+  color: #222;
 }
 
-/* resto das classes (.origem-lista, .origem-botao…) você pode manter como já estava */
+/* subtítulo explicando */
+.origem-subtitle {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 4px;
+}
 
+/* lista de botões centralizada */
+.origem-lista {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* botão de opção, ocupando toda a largura da lista */
+.origem-botao {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid #d4d4d4;
+  background: #f9f9f9;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.08s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.origem-botao:hover {
+  background: #e9f6ff;
+  border-color: #0CA6E9;
+  transform: translateY(-1px);
+}
+
+.origem-botao:active {
+  transform: translateY(0);
+}
+
+/* ============================= */
+/*        RESPONSIVIDADE         */
+/* ============================= */
+
+/* tablets / notebooks menores */
+@media (max-width: 900px) {
+  .origem-page {
+    padding-top: 32px;
+  }
+
+  .origem-card {
+    max-width: 400px;
+  }
+
+  .origem-title {
+    font-size: 1.1rem;
+  }
+
+  .origem-subtitle {
+    font-size: 0.85rem;
+  }
+}
+
+/* celulares */
+@media (max-width: 600px) {
+  .origem-page {
+    padding: 28px 16px;
+  }
+
+  .origem-card {
+    max-width: 100%;
+  }
+
+  .origem-logo {
+    width: 36vw;
+  }
+
+  .origem-title {
+    font-size: 1rem;
+  }
+
+  .origem-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .origem-botao {
+    padding: 9px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* celulares bem pequenos */
+@media (max-width: 400px) {
+  .origem-page {
+    padding-top: 24px;
+  }
+
+  .origem-title {
+    font-size: 0.95rem;
+  }
+
+  .origem-botao {
+    font-size: 0.8rem;
+  }
+}
